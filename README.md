@@ -145,7 +145,9 @@ Pada kode di atas terdapat beberapa fungsi yaitu:
 
 
 # Penjelasan Aplikasi
-
+Aplikasi yang dibuat atau output dari program tersebut adalah aplikasi pembuat password secara acak dengan memanfaatkan konsep OOP. Meskipun program yang dibuat tidak memanfaatkan konsep OOP secara luas, beberapa prinsip OOP seperti penggunaan objek, pengelompokan fungsi-fungsi terkait, dan penggunaan kelas-kelas dari modul `tkinter` dapat ditemukan dalam kode tersebut.
+* Page pertama akan menampilkan intruksi bagaimana penggunaan aplikasi pembuat password yang tekah diprogramkan, setelah itu pengguna dapat mengklik 'Buka Aplikasi' dan akan beralih ke halaman kedua
+* Pada page kedua, pengguna akan diminta untuk menginput panjang dari password yang diinginkan dan mengkilik 'Generate'. Jika pengguna memasukkan panjang password lebih dari 10, maka akan muncul pop-up message yang berisi "Panjang password maksimal adalah 10!". Namun, jika pengguna memasukkan angka dari rentang 1-10 maka aplikasi akan menampilkan password random yang berisi huruf besar/kecil, serta beberapa karakter lainnya. 
 
 
 
