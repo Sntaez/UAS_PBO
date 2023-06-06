@@ -92,6 +92,62 @@ Kode tersebut merupakan definisi dari fungsi `password_generator()`, yang bertan
 * Pengaturan tampilan jendela utama yaitu pengaturan tampilan jendela utama, seperti memberikan judul jendela, mengatur warna latar belakang, dan menambahkan label serta tombol ke dalam jendela.
 * `root.mainloop()` akan menjalankan siklus utama aplikasi Tkinter. Ini akan memperbarui dan menampilkan jendela aplikasi, serta menangani peristiwa yang terjadi di dalamnya.
 
+```py
+# Kode memeriksa apakah skrip dijalankan langsung sebagai file utama 
+if __name__ == "__main__":
+    root = tk.Tk() # Membuat objek root yang merupakan instance dari kelas Tk dari modul tkinter
+    root.title("UAS PBO KELOMPOK 14") # Mengatur judul jendela utama aplikasi 
+
+    # Background color
+    root.configure(bg="black")
+
+    # Header
+    header_label = tk.Label(root, text="Cara Pemakaian Aplikasi", font=("Times New Roman", 20), bg="black", fg="white")
+    header_label.pack(pady=20)
+
+    # Instructions
+    instructions = [
+        "1. Jalankan aplikasi dengan menjalankan script ini.",
+        "2. Aplikasi akan membuka jendela utama yang berisi instruksi penggunaan.",
+        "3. Pada jendela utama, masukkan panjang password yang diinginkan.",
+        "4. Tekan tombol 'Generate' untuk membuat password.",
+        "5. Password yang dihasilkan akan ditampilkan pada jendela utama.",
+        "6. Jika ingin membuat password baru, ulangi langkah 3-5.",
+        "7. Tutup aplikasi dengan menutup jendela."
+    ]
+
+    # Membuat dan menampilkan beberapa label teks 
+    for instruction in instructions:
+        label = tk.Label(root, text=instruction, font=("Times New Roman", 12), bg="black", fg="white")
+        label.pack()
+
+    # Open Password Generator Button
+    open_button = tk.Button(root, text="Buka Aplikasi", font=("Times New Roman", 12), bg="gray", command=open_password_generator)
+    open_button.pack(pady=20)
+
+    # Kode ini menjalankan siklus utama aplikasi Tkinter
+    root.mainloop()
+```
+Pada kode di atas terdapat beberapa fungsi yaitu:
+* `if __name__ == "__main__"` adalah kondisi yang memeriksa apakah skrip ini dijalankan langsung sebagai file utama. Ini digunakan untuk memastikan bahwa kode di dalamnya hanya dijalankan ketika file ini dieksekusi langsung, dan tidak ketika file ini diimpor sebagai modul oleh file lain.
+* `root = tk.Tk()` membuat objek root yang merupakan instance dari kelas Tk Ini merupakan jendela utama atau window dari aplikasi GUI.
+* `root.title("UAS PBO KELOMPOK 14")` mengatur judul jendela utama aplikasi menjadi "UAS PBO KELOMPOK 14".
+* `root.configure(bg="black")` mengatur warna latar belakang (background color) jendela utama menjadi hitam.
+* `header_label = tk.Label(root, text="Cara Pemakaian Aplikasi", font=("Times New Roman", 20), bg="black", fg="white")` membuat objek header_label yang merupakan label teks dengan teks "Cara Pemakaian Aplikasi". Parameter font digunakan untuk mengatur jenis font dan ukuran teks, bg digunakan untuk mengatur warna latar belakang label, dan fg digunakan untuk mengatur warna teks label.
+* `header_label.pack(pady=20)` menempatkan label header_label di jendela utama menggunakan metode `pack()`. Parameter pady digunakan untuk memberikan jarak (padding) di atas dan di bawah label.
+* `instructions` adalah sebuah daftar yang berisi beberapa instruksi yang akan ditampilkan dalam bentuk label teks di jendela utama. Setiap instruksi adalah sebuah string.
+* `Loop for instruction in instructions` digunakan untuk mengiterasi melalui setiap instruksi dalam instructions.
+* `label = tk.Label(root, text=instruction, font=("Times New Roman", 12), bg="black", fg="white")` membuat objek label yang merupakan label teks untuk setiap instruksi. Nilai teks dari label diatur sesuai dengan instruksi yang sedang diiterasi. Parameter lainnya seperti font, bg, dan fg digunakan untuk mengatur tampilan label yang serupa dengan header_label.
+* `label.pack()` menempatkan label di jendela utama.
+* `open_button = tk.Button(root, text="Buka Aplikasi", font=("Times New Roman", 12), bg="gray", command=open_password_generator)` membuat objek open_button yang merupakan sebuah tombol dengan teks "Buka Aplikasi". Parameter font, bg, dan command diatur seperti sebelumnya. `command=open_password_generator` mengacu pada fungsi `open_password_generator` yang diharapkan ada di kode yang tidak ditampilkan.
+* `open_button.pack(pady=20)` menempatkan tombol open_button di jendela utama dengan jarak (padding) di atas dan di bawah tombol.
+* `root.mainloop()` merupakan perintah yang menjalankan siklus utama aplikasi Tkinter. Ini membuat aplikasi tetap berjalan dan merespons terhadap berbagai interaksi pengguna hingga jendela utama ditutup.
+
+
+# Penjelasan Aplikasi
+
+
+
 
 
     
